@@ -18,14 +18,16 @@ public  class CartController {
         this.cartService = cartService;
     }
     @PostMapping
-    public void saveCart(@RequestBody Cart c){
+    public void saveCart(@RequestBody Cart c)
+    {
         cartService.saveCart(c);
     }
     @GetMapping
-    public List<Cart> getAllCarts(){
+    public List<Cart> getAllCarts()
+    {
         return cartService.getAllCarts();
     }
-    @GetMapping("{id}")
+    @GetMapping("id/{id}")
     public  Cart getCartById(@RequestBody Cart c, @PathVariable int id){
        return cartService.getCartById(c, id);
     }
