@@ -21,15 +21,16 @@ public  class CartController {
     public void saveCart(@RequestBody Cart c)
     {
         cartService.saveCart(c);
+
     }
     @GetMapping
     public List<Cart> getAllCarts()
     {
         return cartService.getAllCarts();
     }
-    @GetMapping("id/{id}")
-    public  Cart getCartById(@RequestBody Cart c, @PathVariable int id){
-       return cartService.getCartById(c, id);
+    @GetMapping("user_id")
+    public  Cart getCartById(@RequestBody Cart c, @PathVariable int user_id){
+       return cartService.getCartById(c, user_id);
     }
    @GetMapping("{chekOut_Id}")
     public  Cart getCartByCheckOutById(@PathVariable int checkOut_Id){

@@ -19,8 +19,8 @@ public class CartService {
   public List<Cart> getAllCarts(){
    return cartDAO.FindAllCart();
   }
-  public  Cart getCartById(Cart c, int id){
-   return cartDAO.FindCartById(id);
+  public  Cart getCartById(Cart c, int user_id){
+   return cartDAO.FindCartById(user_id);
 
   }
   public Cart getCartCheckoutId(int checkOut_Id){
